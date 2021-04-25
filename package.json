@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "devStart": "nodemon server.js"
+    "devStart": "nodemon server.js",
+    "test":"echo\"Error: no test specified\"&&exit1"
   },
   "author": "",
   "license": "ISC",
@@ -18,3 +19,4 @@
     "nodemon": "^2.0.7"
   }
 }
+
