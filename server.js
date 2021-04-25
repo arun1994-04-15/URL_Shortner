@@ -19,9 +19,13 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
 
 app.get("/", async function (req, res) {
+ try {
   const shortUrls = await ShortUrl.find();
   //console.log(shortUrls);
   res.render("index", { shortUrls: shortUrls });
+ } catch (error) {
+   console.log(error);
+ }
 });
 
 app.post("/shortUrls", async function (req, res) {
